@@ -4,15 +4,15 @@ from tensorflow.python.keras.preprocessing import image
 import sys
 import numpy as np
 
-# ±q°Ñ¼ÆÅª¨ú¹ÏÀÉ¸ô®|
+# å¾åƒæ•¸è®€å–åœ–æª”è·¯å¾‘
 files = sys.argv[1:]
 
-# ¸ü¤J°V½m¦nªº¼Ò«¬
+# è¼‰å…¥è¨“ç·´å¥½çš„æ¨¡å‹
 net = load_model('model-resnet50-final.h5')
 
 cls_list = ['cats', 'dogs']
 
-# ¿ëÃÑ¨C¤@±i¹Ï
+# è¾¨è­˜æ¯ä¸€å¼µåœ–
 for f in files:
     img = image.load_img(f, target_size=(224, 224))
     if img is None:
